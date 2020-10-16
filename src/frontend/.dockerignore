@@ -1,0 +1,9 @@
+.git
+.gitignore
+.idea
+.DS_Store
+.editorconfig
+node_modules
+Dockerfile
+.env.*
+service-account.json

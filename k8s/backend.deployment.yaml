@@ -17,12 +17,6 @@ spec:
         app: nodejs-guestbook
         tier: backend
     spec:
-     initContainers:
-      - name: init-db-ready
-        image: mongo:4
-        command: ['/bin/sh', '-c']
-        args:
-          - echo "Waiting for mongodb to start...";until (mongo --host nodejs-guestbook-mongodb:27017 >/dev/null 2>&1) do echo "Waiting for connection for 2 sec."; sleep 2; done
      containers:
       - name: backend
         image: nodejs-guestbook-backend
@@ -33,4 +27,4 @@ spec:
         - name: PORT
           value: "8080"
         - name: GUESTBOOK_DB_ADDR
-          value: "nodejs-guestbook-mongodb:27017"
+          value: "mongodb.system:27017"

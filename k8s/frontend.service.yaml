@@ -6,7 +6,7 @@ metadata:
     app: nodejs-guestbook
     tier: frontend
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: nodejs-guestbook
     tier: frontend

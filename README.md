@@ -1,2 +1,3 @@
-# skaffold-example
-Skaffold Example
+# GitOps Example
+
+GitOps Example
