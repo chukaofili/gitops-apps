@@ -1,4 +1,5 @@
 steps:
   # Build the module.
   - name: gcr.io/k8s-skaffold/skaffold
-    args: ['skaffold', 'build', '--default-repo', 'gcr.io/ms-clients-2018']
+    args: ['skaffold', 'build']
+    # args: ['skaffold', 'build', '--default-repo', 'gcr.io/ms-clients-2018']

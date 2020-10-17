@@ -4,16 +4,16 @@ kind: Config
 build:
   tagPolicy:
     gitCommit: {
-      variant: AbbrevCommitSha
+      variant: Tags
     }
   # defines where to find the code at build time and where to push the resulting image
   artifacts:
-  - image: nodejs-guestbook-backend
+  - image: gcr.io/ms-clients-2018/nodejs-guestbook-backend
     context: src/backend
     sync:
       infer:
       - '**/*'
-  - image: nodejs-guestbook-frontend
+  - image: gcr.io/ms-clients-2018/nodejs-guestbook-frontend
     context: src/frontend
     sync:
       infer:
