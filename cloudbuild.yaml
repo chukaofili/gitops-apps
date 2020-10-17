@@ -2,6 +2,7 @@ steps:
   # Build the module.
   - name: 'gcr.io/cloud-builders/git'
     args: ['clone', 'https://github.com/chukaofili/gitops-apps']
-    env: ['PROJECT_ROOT=hello']
+    env: ['HOME=/workspace']
   - name: gcr.io/k8s-skaffold/skaffold
     args: ['skaffold', 'build', '--default-repo', 'gcr.io/ms-clients-2018']
+    env: ['HOME=/workspace']
