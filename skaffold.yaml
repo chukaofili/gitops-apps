@@ -3,7 +3,7 @@ apiVersion: skaffold/v2beta4
 kind: Config
 build:
   tagPolicy:
-    sha256: {}
+    gitCommit: {}
   # defines where to find the code at build time and where to push the resulting image
   artifacts:
   - image: nodejs-guestbook-backend
