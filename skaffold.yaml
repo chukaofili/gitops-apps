@@ -3,9 +3,7 @@ apiVersion: skaffold/v2beta8
 kind: Config
 build:
   tagPolicy:
-    gitCommit: {
-      variant: Tags
-    }
+    gitCommit: {}
   artifacts:
   - image: nodejs-guestbook-backend
     context: src/backend
