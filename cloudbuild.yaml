@@ -1,4 +1,4 @@
 steps:
   # Build the module.
-  - name: chukaofili/build-tools:1.4.0
+  - name: gcr.io/k8s-skaffold/skaffold
     args: ['skaffold', 'build', '--default-repo', 'gcr.io/ms-clients-2018']
