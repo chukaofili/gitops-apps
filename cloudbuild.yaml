@@ -4,8 +4,8 @@ steps:
     args: ['clone', 'https://github.com/chukaofili/gitops-apps']
     dir: 'examples/hello_world'
     env: ['HOME=/workspace']
-  - name: 'chukaofili/build-tools:1.4.0'
-    args: ['ls', '-la']
+  - name: 'gcr.io/k8s-skaffold/skaffold'
+    args: ['cd', 'gitops-apps', '&&', 'skaffold', 'build', '--default-repo', 'gcr.io/ms-clients-2018']
     dir: 'examples/hello_world'
     env: ['HOME=/workspace']
   # - name: gcr.io/k8s-skaffold/skaffold
