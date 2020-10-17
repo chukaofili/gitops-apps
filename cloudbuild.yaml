@@ -1,8 +1,7 @@
 steps:
   # Build the module.
   - name: 'gcr.io/cloud-builders/git'
-    # args: ['clone', 'https://github.com/chukaofili/gitops-apps']
-    args: ['fetch', '--unshallow']
+    args: ['clone', 'https://github.com/chukaofili/gitops-apps']
     dir: 'examples/hello_world'
     env: ['HOME=/workspace']
   - name: gcr.io/k8s-skaffold/skaffold
